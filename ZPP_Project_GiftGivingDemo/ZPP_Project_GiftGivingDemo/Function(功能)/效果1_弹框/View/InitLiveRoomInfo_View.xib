@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InitLiveRoomInfo_View">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WvE-vV-r6V">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ueL-Y6-VOK"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎进入直播间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVH-iB-vE8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="9c5-Bb-uN0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFr-1Z-Yd4">
+                    <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBv-Vv-fvh">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="我知道了"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.50795218460000002" blue="0.44703694360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Gbg-47-dDP"/>
+                        <constraint firstItem="pBv-Vv-fvh" firstAttribute="leading" secondItem="GFr-1Z-Yd4" secondAttribute="leading" id="Jin-UQ-C03"/>
+                        <constraint firstAttribute="bottom" secondItem="pBv-Vv-fvh" secondAttribute="bottom" id="LQ5-3T-Rsn"/>
+                        <constraint firstItem="pBv-Vv-fvh" firstAttribute="top" secondItem="GFr-1Z-Yd4" secondAttribute="top" id="bv5-ZP-Unr"/>
+                        <constraint firstAttribute="trailing" secondItem="pBv-Vv-fvh" secondAttribute="trailing" id="rpM-6u-lhU"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ov-hk-mJB">
+                    <rect key="frame" x="0.0" y="44" width="375" height="132"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fl1-vU-FaJ">
+                            <rect key="frame" x="15" y="0.0" width="348" height="132"/>
+                            <string key="text">1.参与本次直播，清确保手机为非静音状态。
+2.为了观看整场直播内容，请不要随意退出直播间。
+3.直播结束后，您可以随时回看全部内容。
+4.遇到卡顿和加载不出啦，点击返回，重新进入即可。</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Fl1-vU-FaJ" secondAttribute="bottom" id="6EU-H3-ZkG"/>
+                        <constraint firstItem="Fl1-vU-FaJ" firstAttribute="top" secondItem="2Ov-hk-mJB" secondAttribute="top" id="EgS-vm-yWk"/>
+                        <constraint firstAttribute="trailing" secondItem="Fl1-vU-FaJ" secondAttribute="trailing" constant="12" id="nXB-qz-LcC"/>
+                        <constraint firstItem="Fl1-vU-FaJ" firstAttribute="leading" secondItem="2Ov-hk-mJB" secondAttribute="leading" constant="15" id="ySD-xd-zB1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="GFr-1Z-Yd4" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1QJ-QI-Z0r"/>
+                <constraint firstItem="GFr-1Z-Yd4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4XX-p9-e8h"/>
+                <constraint firstItem="xVH-iB-vE8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9z1-U0-9tr"/>
+                <constraint firstItem="WvE-vV-r6V" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="KgO-VJ-Oym"/>
+                <constraint firstItem="2Ov-hk-mJB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Kp2-Wu-wuY"/>
+                <constraint firstItem="WvE-vV-r6V" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="RUS-d7-ZJy"/>
+                <constraint firstItem="2Ov-hk-mJB" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="k9u-9z-c8t"/>
+                <constraint firstItem="GFr-1Z-Yd4" firstAttribute="top" secondItem="2Ov-hk-mJB" secondAttribute="bottom" id="lyS-fh-01L"/>
+                <constraint firstItem="2Ov-hk-mJB" firstAttribute="top" secondItem="WvE-vV-r6V" secondAttribute="bottom" id="omM-eG-ZuO"/>
+                <constraint firstItem="GFr-1Z-Yd4" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="sR1-qq-hpt"/>
+                <constraint firstItem="xVH-iB-vE8" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="u18-kL-FsM"/>
+                <constraint firstItem="xVH-iB-vE8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="y30-Rh-TlK"/>
+                <constraint firstItem="WvE-vV-r6V" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ykc-YL-IaP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="btn_confirm" destination="pBv-Vv-fvh" id="D8G-SD-Mjg"/>
+                <outlet property="view_footer" destination="GFr-1Z-Yd4" id="4pp-1f-1lW"/>
+                <outlet property="view_header" destination="WvE-vV-r6V" id="7kg-4h-bkw"/>
+            </connections>
+            <point key="canvasLocation" x="32.5" y="61"/>
+        </view>
+    </objects>
+</document>
