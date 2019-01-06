@@ -5,5 +5,8 @@
 #import "UIColor+LYHCategory_UIKit_UIColor.h"
 #import "UIButton+LYHCategory_UIKit_UIButton.h"
 
+// 第三方开源框架
+//#import <IQKeyboardManager/IQKeyboardManager.h>
+#import "IQKeyboardManager.h"
 
 #endif /* PrefixHeader_pch */

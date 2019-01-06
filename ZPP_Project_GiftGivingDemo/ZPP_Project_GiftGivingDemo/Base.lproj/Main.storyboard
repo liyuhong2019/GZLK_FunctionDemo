@@ -21,6 +21,9 @@
                                 <rect key="frame" x="133" y="302" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="效果2_打赏界面"/>
+                                <connections>
+                                    <action selector="ClickFunction2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V5c-63-55W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxK-99-tcv">
                                 <rect key="frame" x="58" y="137" width="259" height="30"/>
@@ -30,6 +33,13 @@
                                     <action selector="ClickFunction1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5zt-la-pW0"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNo-38-jjy">
+                                <rect key="frame" x="164" y="543" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50795218460000002" blue="0.44703694360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
