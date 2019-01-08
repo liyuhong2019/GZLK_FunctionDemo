@@ -7,13 +7,15 @@
 
 
 #import <UIKit/UIKit.h>
+
+#import "GiftView.h"
+
 /**
  一、
  @class 是用来告诉编译器 说明 这个类的.h文件 系统有 GiftGivingView这个类 。
  使用到该类额时候 到.m里面的时候 就需要#import该类 。这样是提高性能并且防止循环引用
  */
 @class GiftGivingView;
-
 /**
  二、创建一个代理 并且设置代理的必须实现方法和可选方法
  必须实现 关键字 @required
@@ -36,18 +38,30 @@
 //- (void)function1GiftGivingViewDelegate:(GiftGivingView *)view; // 必须实现的方法
 @optional
 - (void)CloseView_GiftGivingViewDelegate:(GiftGivingView *)view; // 可选的方法
+
+- (void)Click_GiftGivingViewDelegate:(GiftGivingView *)view GiftView:(GiftView *)view WithModel:(GiftModel *)model; // 点中哪个model
+- (void)Click_GiftGivingViewDelegate:(GiftGivingView *)view ClickGiftView:(GiftView *)view WithClickModel:(GiftModel *)model WithExceptionalCount:(NSString *)count; // 打赏
+
 @end
 #pragma mark  1.1、代理方法 end
 
 // 遵循<UIScrollViewDelegate> 用来监听礼物滚动的控件
-@interface GiftGivingView : UIView<UIScrollViewDelegate>
+@interface GiftGivingView : UIView<UIScrollViewDelegate,GiftViewDelegate>
 
 #pragma mark - 1.2、属性(控件、自定义) start
 /*******控件属性 start *****/
 @property (nonatomic,strong) NSArray *arr_Data;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollview_gift;
-@property (weak, nonatomic) IBOutlet UIPageControl *pageC;
+//@property (weak, nonatomic) IBOutlet UIPageControl *pageC;
+@property (strong, nonatomic) UIPageControl *pageC;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
+@property (weak, nonatomic) IBOutlet UIView *headerView;
+@property (weak, nonatomic) IBOutlet UIView *footerView;
+
+@property (assign,nonatomic) int viewTg;
+@property (weak, nonatomic) IBOutlet UITextField *tf_exceptionalCount;
+// infoModel
 /*******控件属性 end *****/
 
 /*******自定义属性 start *****/

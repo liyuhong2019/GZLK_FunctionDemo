@@ -16,7 +16,8 @@
 
 #import "GiftGivingView.h"
 #import "UIViewExt.h"
-
+#import "GiftView.h"
+#import "GiftModel.h"
 /** 宏定义 绑定tag、弹出时间 */
 #define TagValue  1000
 #define AlertTime 0.3 //弹出动画时间
@@ -26,6 +27,24 @@
 #define GradientStart @"#3EC5F5"  // 渐变开始颜色
 #define GradientEnd @"#2B82DE"  // 渐变结束颜色
 
+// 礼物的宽高
+#define giftW 70.0f
+#define giftH 70.0f
+
+
+#define imgWidth 30
+#define imgHeight 30
+#define itemsWidth (KScreenWidth/4)
+#define itemsHeight (KScreenWidth/4)
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+#define KScreenWidth [UIScreen mainScreen].bounds.size.width
+
+@interface GiftGivingView ()
+// 标记点中哪个model、哪个view
+@property (strong,nonatomic) GiftModel *gModel;
+@property (strong,nonatomic) GiftView *gView;
+
+@end
 @implementation GiftGivingView
 #pragma - alloc init 和 xib 初始化的时候 调用的方法 start
 - (instancetype)init
@@ -41,6 +60,9 @@
     if (self = [super initWithFrame:frame]) {
         // ...代码创建 调用的方法2 这里设置frame
         // NSLog(@"%s",__func__);
+        
+
+        
     }
     return self;
 }
@@ -52,9 +74,12 @@
         NSLog(@"%s",__func__);
         // 在这里设置一共有多少个数据
         self.scrollview_gift.delegate = self;
-        self.pageC.numberOfPages = 2; // 设置多少个分页
-        [self.pageC addTarget:self action:@selector(pageScrollAction) forControlEvents:UIControlEventValueChanged];
-
+        self.scrollview_gift.pagingEnabled = YES; // 分页滚动
+        self.pageC = [[UIPageControl alloc]init];
+        self.pageC.backgroundColor = [UIColor redColor];
+         self.pageC.numberOfPages = 5;
+    
+      [self.footerView addSubview:self.pageC];
     }
     return self;
 }
@@ -73,19 +98,104 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    // NSLog(@"%s",__func__);
+     NSLog(@"布局子控件 %s",__func__);
     // 布局子控件的 frame
-    [self loadData];
+    if (self.viewTg == 1) {
+        NSLog(@"不加载了");
+    }
+    else
+    {
+        [self loadData];
+        [self drawView];
+    }
+    
+    
+
 }
 #pragma  alloc init 和 xib 初始化的时候 调用的方法 end
 
 #pragma mark - customMethod 自定义方法 快速xib 创建 start
 - (void)loadData
 {
-    self.scrollview_gift.contentSize =  CGSizeMake([UIScreen mainScreen].bounds.size.width * 2, self.scrollview_gift.frame.size.height);
-    CGFloat col = 0;
-    CGFloat row = 0;
-     for(int i=0; i<_arr_Data.count; i++){
+    NSInteger pageCount = _arr_Data.count/8;
+    if (_arr_Data.count % 8 > 0) {
+        pageCount = pageCount + 1;
+    }
+    else
+    {
+        pageCount = pageCount;
+    }
+    
+    self.scrollview_gift.contentSize =  CGSizeMake([UIScreen mainScreen].bounds.size.width * pageCount, self.scrollview_gift.frame.size.height);
+    
+    self.pageC = [[UIPageControl alloc]init];
+    self.pageC.frame = CGRectMake((KScreenWidth-200)/2, 0, 200, 20);
+        
+    self.pageC.numberOfPages = pageCount;
+    [self.pageC addTarget:self action:@selector(pageScrollAction) forControlEvents:UIControlEventValueChanged];
+    [self.footerView addSubview:self.pageC];
+    int col = 0; // 1行4个
+    int row = 0;
+    NSLog(@"数据的数量 %lu",(unsigned long)self.arr_Data.count);
+    
+    NSMutableArray *tempArray  = [NSMutableArray array];
+    for (NSDictionary *dict in self.arr_Data) {
+        GiftModel *model = [[GiftModel alloc]initWithDict:dict];
+        [tempArray addObject:model];
+    }
+    self.arr_Data = tempArray;
+    
+    NSLog(@"%@",self.arr_Data);
+    
+     for(int i=0; i<pageCount; i++){
+         // 一共有多少页
+         for (int j = 0; j < 8; j++) {
+             // 每一页8个view
+              CGFloat hMargin  = 10;
+              CGFloat vMargin = 15;
+              CGFloat w = ([UIScreen mainScreen].bounds.size.width - (hMargin * (4 - 1))) / 4;
+              CGFloat h = (self.scrollview_gift.frame.size.height - 15) / 2;
+              CGFloat x = (hMargin + w) * (j % 4) + KScreenWidth*i; // 水平间距 + 自身宽度 * 第几个控件 (0 % 4) = 0
+              CGFloat y = (vMargin + h) * (j / 4);
+             if(i == (pageCount-1))
+             {
+                 NSLog(@"最后一页数据");
+                 if (_arr_Data.count > (pageCount-1) * 8 + j) {
+                     NSLog(@"添加 %d view",j);
+                     GiftView *gv  = [[GiftView alloc]initWithFrame:CGRectMake(x, y, w, h)];
+                     NSInteger index = 8 * i + j;
+                     gv.model = self.arr_Data[index];
+                     gv.giftViewDelegate = self;
+                     [self.scrollview_gift addSubview:gv];
+                 }
+                 else
+                 {
+                     NSLog(@"不要添加view了");
+                 }
+             }
+             else
+             {
+                 // 这里是添加之前的view
+                 GiftView *gv  = [[GiftView alloc]initWithFrame:CGRectMake(x, y, w, h)];
+                 NSInteger index = 8 * i + j;
+                 gv.model = self.arr_Data[index];
+                 gv.giftViewDelegate = self;
+                 [self.scrollview_gift addSubview:gv];
+
+             }
+             col++;
+             if(col ==4){  //一行显示7个表情
+                 col = 0;
+                 row ++;
+             }
+             if(row == 2){
+                 row = 0;
+             }
+         }
+         
+         
+         
+         
          
      }
 }
@@ -98,6 +208,26 @@
 
 
 #pragma mark - 自定义对象方法 start
+- (void)drawView
+{
+    /**
+     参考链接
+     https://www.jianshu.com/p/2cd640183d5f
+     https://www.jianshu.com/p/139f4fbe7b6b
+     */
+    // 使用贝塞尔曲线去绘制一个圆角
+    // 通俗点就是UIBezierPath用来指定绘制图形路径，而CAShapeLayer就是根据路径来绘图的。
+    // 图2
+    
+    UIBezierPath *maskPath2 = [UIBezierPath bezierPathWithRoundedRect:self.contentView.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(20, 20)];
+    CAShapeLayer *maskLayer2 = [[CAShapeLayer alloc] init];
+    maskLayer2.frame = self.contentView.bounds;
+    maskLayer2.path = maskPath2.CGPath;
+    self.contentView.layer.mask = maskLayer2;
+    
+    
+}
+
 //隐藏
 -(void)hide
 {
@@ -171,10 +301,8 @@
     [UIView setAnimationDelay:0];
     
     //设置view的frame，往上平移
+    self.viewTg = 1;
     self.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height-keyboardRect.size.height-315, [UIScreen mainScreen].bounds.size.width, 315);
-
-//    [(UIView *)[self viewWithTag:1000] setFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height-keyboardRect.size.height-315, [UIScreen mainScreen].bounds.size.width, 315)];
-    
     //提交动画
     [UIView commitAnimations];
 }
@@ -184,11 +312,8 @@
     //定义动画
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.25];
-    
     //设置view的frame，往下平移
-    
     self.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height-315, [UIScreen mainScreen].bounds.size.width, 315);
-//    [(UIView *)[self viewWithTag:1000] setFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 315, [UIScreen mainScreen].bounds.size.width, 315)];
     [UIView commitAnimations];
 }
 
@@ -212,8 +337,35 @@
     [self.scrollview_gift scrollRectToVisible:CGRectMake(contentOfSize, 0, self.scrollview_gift.width, self.scrollview_gift.height) animated:YES];
 }
 
+- (void)Click_GiftViewDelegate:(GiftView *)view WithModel:(GiftModel *)model
+{
+    NSLog(@"点击的礼物 %@",model.name);
+    
+    if ([self.giftGivingViewDelegate respondsToSelector:@selector(Click_GiftGivingViewDelegate:GiftView:WithModel:)])
+    {
+        self.gModel = model;
+        self.gView = view;
+        [self.giftGivingViewDelegate Click_GiftGivingViewDelegate:self GiftView:view WithModel:model];
+    }
+    
+}
+
+- (IBAction)go2Exceptional:(UIButton *)sender {
+    NSLog(@"查看点击了哪个model %@",self.gModel.name);
+    NSLog(@"查看点击了哪个view %@",self.gView);
+
+    // 记录数量
+    NSLog(@"记录数量 %@",self.tf_exceptionalCount.text);
+    
+    if ([self.giftGivingViewDelegate respondsToSelector:@selector(Click_GiftGivingViewDelegate:ClickGiftView:WithClickModel:WithExceptionalCount:)]) {
+        [self.giftGivingViewDelegate Click_GiftGivingViewDelegate:self ClickGiftView:self.gView WithClickModel:self.gModel WithExceptionalCount:self.tf_exceptionalCount.text];
+        
+    }
+    
+}
 
 @end
+
 
 
 /**

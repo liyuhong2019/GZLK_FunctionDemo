@@ -35,9 +35,10 @@
 		9BDA19BF21E2204000F83527 /* IQUIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA19AD21E2204000F83527 /* IQUIView+Hierarchy.m */; };
 		9BDA19C021E2204000F83527 /* IQUIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA19B121E2204000F83527 /* IQUIViewController+Additions.m */; };
 		9BDA19C121E2204000F83527 /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA19B321E2204000F83527 /* IQKeyboardReturnKeyHandler.m */; };
-		9BDA19C421E225BD00F83527 /* giftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA19C321E225BD00F83527 /* giftView.m */; };
-		9BDA19C621E225D300F83527 /* giftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA19C521E225D300F83527 /* giftView.xib */; };
 		9BDA19CA21E230CF00F83527 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA19C821E230CF00F83527 /* UIViewExt.m */; };
+		9BEAD1E321E33795001B7FD4 /* GiftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEAD1E221E33795001B7FD4 /* GiftView.m */; };
+		9BEAD1E521E337A0001B7FD4 /* GiftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BEAD1E421E337A0001B7FD4 /* GiftView.xib */; };
+		9BF2D9FB21E48A2100C3BCC7 /* GiftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2D9FA21E48A2100C3BCC7 /* GiftModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,11 +94,13 @@
 		9BDA19B121E2204000F83527 /* IQUIViewController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIViewController+Additions.m"; sourceTree = "<group>"; };
 		9BDA19B221E2204000F83527 /* IQUIView+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+Hierarchy.h"; sourceTree = "<group>"; };
 		9BDA19B321E2204000F83527 /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
-		9BDA19C221E225BD00F83527 /* giftView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = giftView.h; sourceTree = "<group>"; };
-		9BDA19C321E225BD00F83527 /* giftView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = giftView.m; sourceTree = "<group>"; };
-		9BDA19C521E225D300F83527 /* giftView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = giftView.xib; sourceTree = "<group>"; };
 		9BDA19C821E230CF00F83527 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		9BDA19C921E230CF00F83527 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		9BEAD1E121E33795001B7FD4 /* GiftView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiftView.h; sourceTree = "<group>"; };
+		9BEAD1E221E33795001B7FD4 /* GiftView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiftView.m; sourceTree = "<group>"; };
+		9BEAD1E421E337A0001B7FD4 /* GiftView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftView.xib; sourceTree = "<group>"; };
+		9BF2D9F921E48A2100C3BCC7 /* GiftModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiftModel.h; sourceTree = "<group>"; };
+		9BF2D9FA21E48A2100C3BCC7 /* GiftModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiftModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,8 @@
 		9B5A1AA921E1E3F0001726A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9BF2D9F921E48A2100C3BCC7 /* GiftModel.h */,
+				9BF2D9FA21E48A2100C3BCC7 /* GiftModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,9 +196,9 @@
 				9BDA198B21E213A600F83527 /* GiftGivingView.h */,
 				9BDA198C21E213A600F83527 /* GiftGivingView.m */,
 				9BDA198E21E213BA00F83527 /* GiftGivingView.xib */,
-				9BDA19C221E225BD00F83527 /* giftView.h */,
-				9BDA19C321E225BD00F83527 /* giftView.m */,
-				9BDA19C521E225D300F83527 /* giftView.xib */,
+				9BEAD1E121E33795001B7FD4 /* GiftView.h */,
+				9BEAD1E221E33795001B7FD4 /* GiftView.m */,
+				9BEAD1E421E337A0001B7FD4 /* GiftView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -440,12 +445,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B5A1AA321E1E37A001726A0 /* 效果2.jpg in Resources */,
-				9BDA19C621E225D300F83527 /* giftView.xib in Resources */,
 				9BDA197021E1ECB800F83527 /* InitLiveRoomInfo_View.xib in Resources */,
 				9B5A1A9721E1E202001726A0 /* LaunchScreen.storyboard in Resources */,
 				9B5A1A9421E1E202001726A0 /* Assets.xcassets in Resources */,
 				9BDA198F21E213BA00F83527 /* GiftGivingView.xib in Resources */,
 				9B5A1AA421E1E37A001726A0 /* 效果1.jpg in Resources */,
+				9BEAD1E521E337A0001B7FD4 /* GiftView.xib in Resources */,
 				9BDA19BA21E2204000F83527 /* IQKeyboardManager.bundle in Resources */,
 				9B5A1A9221E1E200001726A0 /* Main.storyboard in Resources */,
 			);
@@ -458,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BEAD1E321E33795001B7FD4 /* GiftView.m in Sources */,
 				9BDA197C21E1F60D00F83527 /* UIButton+LYHCategory_UIKit_UIButton.m in Sources */,
 				9BDA19B421E2204000F83527 /* IQTextView.m in Sources */,
 				9BDA19CA21E230CF00F83527 /* UIViewExt.m in Sources */,
@@ -466,7 +472,7 @@
 				9BDA197721E1ED8C00F83527 /* UIColor+LYHCategory_UIKit_UIColor.m in Sources */,
 				9BDA19C121E2204000F83527 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				9BDA196F21E1ECB800F83527 /* InitLiveRoomInfo_View.m in Sources */,
-				9BDA19C421E225BD00F83527 /* giftView.m in Sources */,
+				9BF2D9FB21E48A2100C3BCC7 /* GiftModel.m in Sources */,
 				9BDA19B621E2204000F83527 /* IQTitleBarButtonItem.m in Sources */,
 				9BDA19B821E2204000F83527 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				9BDA19BB21E2204000F83527 /* IQKeyboardManager.m in Sources */,
@@ -619,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3FR6C5N825;
 				GCC_PREFIX_HEADER = "/Volumes/项目/2019_iOS/GitHub/GZLK_FunctionDemo/ZPP_Project_GiftGivingDemo/ZPP_Project_GiftGivingDemo/Main/PrefixHeader.pch";
@@ -628,8 +635,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lyh.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyh.test1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -638,6 +646,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3FR6C5N825;
 				GCC_PREFIX_HEADER = "/Volumes/项目/2019_iOS/GitHub/GZLK_FunctionDemo/ZPP_Project_GiftGivingDemo/ZPP_Project_GiftGivingDemo/Main/PrefixHeader.pch";
@@ -647,8 +656,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lyh.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyh.test1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
