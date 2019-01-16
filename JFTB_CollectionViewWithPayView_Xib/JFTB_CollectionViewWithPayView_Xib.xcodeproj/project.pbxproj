@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B78647B21EF2B1000873070 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78647A21EF2B1000873070 /* AppDelegate.m */; };
+		9B78647E21EF2B1000873070 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78647D21EF2B1000873070 /* ViewController.m */; };
+		9B78648121EF2B1000873070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B78647F21EF2B1000873070 /* Main.storyboard */; };
+		9B78648321EF2B1100873070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B78648221EF2B1100873070 /* Assets.xcassets */; };
+		9B78648621EF2B1100873070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B78648421EF2B1100873070 /* LaunchScreen.storyboard */; };
+		9B78648921EF2B1100873070 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78648821EF2B1100873070 /* main.m */; };
+		9B78649121EF2B3400873070 /* JFTB_PayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78649021EF2B3400873070 /* JFTB_PayView.m */; };
+		9B78649521EF2B4A00873070 /* JFTB_PayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B78649421EF2B4A00873070 /* JFTB_PayView.xib */; };
+		9B78649921EF317D00873070 /* JFTB_PayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78649721EF317D00873070 /* JFTB_PayCell.m */; };
+		9B78649A21EF317D00873070 /* JFTB_PayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B78649821EF317D00873070 /* JFTB_PayCell.xib */; };
+		9B78649E21EF337900873070 /* JFTB_PayHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78649C21EF337900873070 /* JFTB_PayHeaderView.m */; };
+		9B78649F21EF337900873070 /* JFTB_PayHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B78649D21EF337900873070 /* JFTB_PayHeaderView.xib */; };
+		9B7864A321EF33C300873070 /* JFTB_PayFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7864A121EF33C300873070 /* JFTB_PayFooterView.m */; };
+		9B7864A421EF33C300873070 /* JFTB_PayFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7864A221EF33C300873070 /* JFTB_PayFooterView.xib */; };
+		9B7864A721EF3E4600873070 /* JFTB_PayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7864A621EF3E4600873070 /* JFTB_PayModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9B78647621EF2B1000873070 /* JFTB_CollectionViewWithPayView_Xib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFTB_CollectionViewWithPayView_Xib.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B78647921EF2B1000873070 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9B78647A21EF2B1000873070 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9B78647C21EF2B1000873070 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9B78647D21EF2B1000873070 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9B78648021EF2B1000873070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9B78648221EF2B1100873070 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B78648521EF2B1100873070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B78648721EF2B1100873070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B78648821EF2B1100873070 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9B78648F21EF2B3400873070 /* JFTB_PayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFTB_PayView.h; sourceTree = "<group>"; };
+		9B78649021EF2B3400873070 /* JFTB_PayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFTB_PayView.m; sourceTree = "<group>"; };
+		9B78649421EF2B4A00873070 /* JFTB_PayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFTB_PayView.xib; sourceTree = "<group>"; };
+		9B78649621EF317D00873070 /* JFTB_PayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFTB_PayCell.h; sourceTree = "<group>"; };
+		9B78649721EF317D00873070 /* JFTB_PayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFTB_PayCell.m; sourceTree = "<group>"; };
+		9B78649821EF317D00873070 /* JFTB_PayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFTB_PayCell.xib; sourceTree = "<group>"; };
+		9B78649B21EF337900873070 /* JFTB_PayHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFTB_PayHeaderView.h; sourceTree = "<group>"; };
+		9B78649C21EF337900873070 /* JFTB_PayHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFTB_PayHeaderView.m; sourceTree = "<group>"; };
+		9B78649D21EF337900873070 /* JFTB_PayHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFTB_PayHeaderView.xib; sourceTree = "<group>"; };
+		9B7864A021EF33C300873070 /* JFTB_PayFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFTB_PayFooterView.h; sourceTree = "<group>"; };
+		9B7864A121EF33C300873070 /* JFTB_PayFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFTB_PayFooterView.m; sourceTree = "<group>"; };
+		9B7864A221EF33C300873070 /* JFTB_PayFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFTB_PayFooterView.xib; sourceTree = "<group>"; };
+		9B7864A521EF3E4600873070 /* JFTB_PayModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFTB_PayModel.h; sourceTree = "<group>"; };
+		9B7864A621EF3E4600873070 /* JFTB_PayModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFTB_PayModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B78647321EF2B1000873070 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B78646D21EF2B1000873070 = {
+			isa = PBXGroup;
+			children = (
+				9B78647821EF2B1000873070 /* JFTB_CollectionViewWithPayView_Xib */,
+				9B78647721EF2B1000873070 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B78647721EF2B1000873070 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B78647621EF2B1000873070 /* JFTB_CollectionViewWithPayView_Xib.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B78647821EF2B1000873070 /* JFTB_CollectionViewWithPayView_Xib */ = {
+			isa = PBXGroup;
+			children = (
+				9B78647921EF2B1000873070 /* AppDelegate.h */,
+				9B78647A21EF2B1000873070 /* AppDelegate.m */,
+				9B78647C21EF2B1000873070 /* ViewController.h */,
+				9B78647D21EF2B1000873070 /* ViewController.m */,
+				9B78648F21EF2B3400873070 /* JFTB_PayView.h */,
+				9B78649021EF2B3400873070 /* JFTB_PayView.m */,
+				9B78649421EF2B4A00873070 /* JFTB_PayView.xib */,
+				9B7864A521EF3E4600873070 /* JFTB_PayModel.h */,
+				9B7864A621EF3E4600873070 /* JFTB_PayModel.m */,
+				9B78649621EF317D00873070 /* JFTB_PayCell.h */,
+				9B78649721EF317D00873070 /* JFTB_PayCell.m */,
+				9B78649821EF317D00873070 /* JFTB_PayCell.xib */,
+				9B78649B21EF337900873070 /* JFTB_PayHeaderView.h */,
+				9B78649C21EF337900873070 /* JFTB_PayHeaderView.m */,
+				9B78649D21EF337900873070 /* JFTB_PayHeaderView.xib */,
+				9B7864A021EF33C300873070 /* JFTB_PayFooterView.h */,
+				9B7864A121EF33C300873070 /* JFTB_PayFooterView.m */,
+				9B7864A221EF33C300873070 /* JFTB_PayFooterView.xib */,
+				9B78647F21EF2B1000873070 /* Main.storyboard */,
+				9B78648221EF2B1100873070 /* Assets.xcassets */,
+				9B78648421EF2B1100873070 /* LaunchScreen.storyboard */,
+				9B78648721EF2B1100873070 /* Info.plist */,
+				9B78648821EF2B1100873070 /* main.m */,
+			);
+			path = JFTB_CollectionViewWithPayView_Xib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B78647521EF2B1000873070 /* JFTB_CollectionViewWithPayView_Xib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B78648C21EF2B1100873070 /* Build configuration list for PBXNativeTarget "JFTB_CollectionViewWithPayView_Xib" */;
+			buildPhases = (
+				9B78647221EF2B1000873070 /* Sources */,
+				9B78647321EF2B1000873070 /* Frameworks */,
+				9B78647421EF2B1000873070 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JFTB_CollectionViewWithPayView_Xib;
+			productName = JFTB_CollectionViewWithPayView_Xib;
+			productReference = 9B78647621EF2B1000873070 /* JFTB_CollectionViewWithPayView_Xib.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B78646E21EF2B1000873070 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = lee;
+				TargetAttributes = {
+					9B78647521EF2B1000873070 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 9B78647121EF2B1000873070 /* Build configuration list for PBXProject "JFTB_CollectionViewWithPayView_Xib" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B78646D21EF2B1000873070;
+			productRefGroup = 9B78647721EF2B1000873070 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B78647521EF2B1000873070 /* JFTB_CollectionViewWithPayView_Xib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B78647421EF2B1000873070 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B78648621EF2B1100873070 /* LaunchScreen.storyboard in Resources */,
+				9B78648321EF2B1100873070 /* Assets.xcassets in Resources */,
+				9B78649F21EF337900873070 /* JFTB_PayHeaderView.xib in Resources */,
+				9B7864A421EF33C300873070 /* JFTB_PayFooterView.xib in Resources */,
+				9B78648121EF2B1000873070 /* Main.storyboard in Resources */,
+				9B78649A21EF317D00873070 /* JFTB_PayCell.xib in Resources */,
+				9B78649521EF2B4A00873070 /* JFTB_PayView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B78647221EF2B1000873070 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B78647E21EF2B1000873070 /* ViewController.m in Sources */,
+				9B78648921EF2B1100873070 /* main.m in Sources */,
+				9B7864A721EF3E4600873070 /* JFTB_PayModel.m in Sources */,
+				9B78649E21EF337900873070 /* JFTB_PayHeaderView.m in Sources */,
+				9B7864A321EF33C300873070 /* JFTB_PayFooterView.m in Sources */,
+				9B78647B21EF2B1000873070 /* AppDelegate.m in Sources */,
+				9B78649121EF2B3400873070 /* JFTB_PayView.m in Sources */,
+				9B78649921EF317D00873070 /* JFTB_PayCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9B78647F21EF2B1000873070 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B78648021EF2B1000873070 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9B78648421EF2B1100873070 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B78648521EF2B1100873070 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B78648A21EF2B1100873070 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9B78648B21EF2B1100873070 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B78648D21EF2B1100873070 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FR6C5N825;
+				INFOPLIST_FILE = JFTB_CollectionViewWithPayView_Xib/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyh.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B78648E21EF2B1100873070 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FR6C5N825;
+				INFOPLIST_FILE = JFTB_CollectionViewWithPayView_Xib/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyh.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B78647121EF2B1000873070 /* Build configuration list for PBXProject "JFTB_CollectionViewWithPayView_Xib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B78648A21EF2B1100873070 /* Debug */,
+				9B78648B21EF2B1100873070 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B78648C21EF2B1100873070 /* Build configuration list for PBXNativeTarget "JFTB_CollectionViewWithPayView_Xib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B78648D21EF2B1100873070 /* Debug */,
+				9B78648E21EF2B1100873070 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B78646E21EF2B1000873070 /* Project object */;
+}
